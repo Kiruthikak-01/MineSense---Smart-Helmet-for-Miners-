@@ -1,0 +1,124 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyframe Animations */
+@keyframes ping-amber {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes signal-wave {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes trace {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes spark {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px) translateX(var(--tx, 30px)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--coal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amber);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-glow);
+}
+
+/* Form elements */
+input,
+textarea {
+  background-color: var(--steel);
+  border: 1px solid var(--border-amber);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  font-family: "Barlow", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+  outline: none;
+}
+
+::placeholder {
+  color: var(--text-dim);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
