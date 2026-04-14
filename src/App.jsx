@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Hero from "./components/Hero";
-import AnimatedText from "./components/AnimatedText";
 import AnimatedSection from "./components/AnimatedSection";
 import ArchitectureSection from "./components/ArchitectureSection";
 import Gallery from "./components/Gallery";
@@ -43,7 +42,7 @@ function App() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   return (
     <div
