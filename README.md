@@ -1,6 +1,12 @@
-# Mine Sense - React Version with Animated Components
+# Mine Sense - IoT Smart Safety Helmet
 
-A modern, animated React website for Mine Sense - Smart IoT Helmet for Miner Safety.
+A professional React website for **MineSense** - Industrial IoT Smart Helmet for Real-Time Miner Safety & Monitoring.
+
+🔗 **GitHub Repository:** https://github.com/Kiruthikak-01/MineSense---Smart-Helmet-for-Miners-
+
+## Overview
+
+MineSense is an advanced IoT-based smart safety helmet that monitors environmental conditions and miner health in real-time, providing instant alerts to prevent accidents before they become tragedies. This repository contains the professional portfolio website and project showcase.
 
 ## Features
 
