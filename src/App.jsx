@@ -6,26 +6,27 @@ import ArchitectureSection from "./components/ArchitectureSection";
 import Gallery from "./components/Gallery";
 import "./App.css";
 
+// Define sections outside component to avoid recreation on every render
+const SECTIONS = [
+  { id: "challenge", label: "Challenge" },
+  { id: "innovation", label: "Innovation" },
+  { id: "architecture", label: "Architecture" },
+  { id: "how-it-works", label: "How It Works" },
+  { id: "results", label: "Results" },
+  { id: "gallery", label: "Gallery" },
+  { id: "connect", label: "Connect" },
+];
+
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-
-  const sections = [
-    { id: "challenge", label: "Challenge" },
-    { id: "innovation", label: "Innovation" },
-    { id: "architecture", label: "Architecture" },
-    { id: "how-it-works", label: "How It Works" },
-    { id: "results", label: "Results" },
-    { id: "gallery", label: "Gallery" },
-    { id: "connect", label: "Connect" },
-  ];
 
   // Scroll tracking for active section highlighting
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
+      for (const section of SECTIONS) {
         const element = document.getElementById(section.id);
         if (element) {
           const { offsetTop, offsetHeight } = element;
@@ -42,7 +43,7 @@ function App() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections]);
+  }, []);
 
   return (
     <div
@@ -124,7 +125,7 @@ function App() {
 
           {/* Nav links */}
           <div className="hidden md:flex gap-1">
-            {sections.map((section) => (
+            {SECTIONS.map((section) => (
               <motion.a
                 key={section.id}
                 href={`#${section.id}`}
@@ -169,7 +170,7 @@ function App() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
           >
-            {sections.map((section) => (
+            {SECTIONS.map((section) => (
               <a
                 key={section.id}
                 href={`#${section.id}`}
